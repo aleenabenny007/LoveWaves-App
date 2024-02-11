@@ -35,7 +35,7 @@ class LoginFooterWidget extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             const TextSpan(text: "  "),
-            TextSpan(text: tSignup, style: TextStyle(color: appPrimaryColor)),
+            const TextSpan(text: tSignup, style: TextStyle(color: appPrimaryColor)),
           ])),
         ),
       ],

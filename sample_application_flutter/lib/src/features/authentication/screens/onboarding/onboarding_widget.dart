@@ -10,7 +10,6 @@ class OnBoardingPageWidget extends StatelessWidget {
 
   final OnBoardingModel model;
 
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -20,35 +19,38 @@ class OnBoardingPageWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image(
-            image: AssetImage(model.image),
-            height: size.height * 0.45,
+          SizedBox(height: 80,),
+          Expanded(
+            flex: 4,
+            child: Image(
+              image: AssetImage(model.image),
+              height: size.height * 0.45,
+            ),
           ),
-          Column(
-            children: [
-              Text(
-                model.title,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-              Text(
-                model.subTitle,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-            ],
+          SizedBox(height: 20,),
+          Text(
+            model.title,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
           Text(
-            model.counterText,
-            
+            model.subTitle,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
-          const SizedBox(
-            height: 80.0,
+          SizedBox(height: 20,),
+          Expanded(
+            child: Text(
+              model.counterText,
+            ),
+          ),
+          Expanded(
+            child: const SizedBox(
+              height: 80.0,
+            ),
           )
         ],
       ),
     );
   }
 }
-
-

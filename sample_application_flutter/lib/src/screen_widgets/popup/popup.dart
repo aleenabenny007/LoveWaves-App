@@ -53,7 +53,7 @@ class _PopUpState extends State<PopUp> {
     return AlertDialog(
       title: const Text('How do you feel now?',style: TextStyle(color: Color.fromARGB(255, 3, 63, 112)),),
       backgroundColor: const Color.fromARGB(255, 250, 249, 249),
-      contentPadding: EdgeInsets.all(10),
+      contentPadding: const EdgeInsets.all(10),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

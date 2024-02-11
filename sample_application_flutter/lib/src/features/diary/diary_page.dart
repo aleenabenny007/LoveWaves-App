@@ -155,9 +155,10 @@ class _AddDiaryEntryPageState extends State<AddDiaryEntryPage> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('New Entry'),
-          leading: Icon(Icons.arrow_back_ios),
+          leading: IconButton(icon: const Icon(Icons.arrow_back_ios),onPressed: () {
+            Navigator.of(context).pop();
+          },),
           backgroundColor: Colors.white,
-          automaticallyImplyLeading: true, // Hide the back button
           actions: [
             TextButton(
               onPressed: () {
